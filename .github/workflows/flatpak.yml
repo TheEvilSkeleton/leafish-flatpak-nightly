@@ -8,12 +8,12 @@ on:
   workflow_dispatch:
 
 env:
-  APP_ID: # App ID (reverse-DNS)
-  MANIFEST_PATH: # Path to manifest
-  IMAGE_NAME: # Name of Docker image
-  IMAGE_TAG: # Tag of image
-  FLATPAK_BUNDLE: # Name of bundle (excl. .flatpak)
-  FLATPAK_BRANCH: # Flatpak branch
+  APP_ID: com.github.Lea_fish.Leafish # App ID (reverse-DNS)
+  MANIFEST_PATH: com.github.Lea_fish.Leafish.yaml # Path to manifest
+  IMAGE_NAME: leafish # Name of Docker image
+  IMAGE_TAG: nightly # Tag of image
+  FLATPAK_BUNDLE: leafish # Name of bundle (excl. .flatpak)
+  FLATPAK_BRANCH: nightly # Flatpak branch
   FLATPAK_BUILD_DIR: build-dir
   FLATPAK_BUILD_REPO: build-repo
 

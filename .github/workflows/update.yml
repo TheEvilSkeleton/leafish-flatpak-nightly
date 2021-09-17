@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
 
 env:
-  MANIFEST_PATH: # Path to manifest
+  MANIFEST_PATH: com.github.Lea_fish.Leafish.yaml # Path to manifest
   REPO: # link to project repository (optional)
 
 jobs:
@@ -30,6 +30,18 @@ jobs:
         git config user.email "github-actions[bot]@users.noreply.github.com"
         git config user.name "github-actions[bot]"
         /app/flatpak-external-data-checker --update --commit-only ${MANIFEST_PATH}
+
+    - name: Update Rust dependencies
+      continue-on-error: true
+      run: |
+        set -x
+        apt-get install -y python3-aiohttp python3-toml
+        git clone --recurse-submodules -b main https://github.com/Lea-fish/Leafish.git leafish
+        cd leafish
+        python3 packaging/flatpak/flatpak-builder-tools/cargo/flatpak-cargo-generator.py Cargo.lock -o ../main/cargo-sources.json
+        cd ../main
+        git add cargo-sources.json
+        git commit -m "Update cargo-sources.json"
 
     - name: Push to branch
       continue-on-error: true

@@ -36,4 +36,4 @@ modules:
       - type: git
         url: https://github.com/Lea-fish/Leafish.git
         branch: main
-        commit: db5e469e7c68b3e9e31b446ee625ee34ba520f2b
+        commit: 9176d74d496b641e6da91bc81cec44292b95d951

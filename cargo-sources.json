@@ -216,6 +216,19 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/atomic_float/atomic_float-0.1.0.crate",
+        "sha256": "62af46d040ba9df09edc6528dae9d8e49f5f3e82f55b7d2ec31a733c38dbc49d",
+        "dest": "cargo/vendor/atomic_float-0.1.0"
+    },
+    {
+        "type": "file",
+        "url": "data:%7B%22package%22%3A%20%2262af46d040ba9df09edc6528dae9d8e49f5f3e82f55b7d2ec31a733c38dbc49d%22%2C%20%22files%22%3A%20%7B%7D%7D",
+        "dest": "cargo/vendor/atomic_float-0.1.0",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/atty/atty-0.2.14.crate",
         "sha256": "d9b39be18770d11421cdb1b9947a45dd3f37e93092cbf377614828a319d5fee8",
         "dest": "cargo/vendor/atty-0.2.14"
